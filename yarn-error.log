@@ -1,0 +1,96 @@
+Arguments: 
+  /home/lopu/.nvm/versions/node/v8.11.2/bin/node /usr/share/yarn/bin/yarn.js add git+https://github.com/eziranetwork/highcharts-dist#tmp
+
+PATH: 
+  /home/lopu/bin:/home/lopu/.local/bin:/home/lopu/.nvm/versions/node/v8.11.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/PROGRA~1/ConEmu/ConEmu/wsl:/mnt/c/Program Files/ConEmu/ConEmu/Scripts:/mnt/c/Program Files/ConEmu:/mnt/c/Program Files/ConEmu/ConEmu:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Nikol/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/Microsoft VS Code Insiders/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  8.11.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, lstat '/home/lopu/.cache/yarn/v1/npm-json5-0.5.1-1eade7acc012034ad84e2396767ead9fa5495821/lib/json5.js'
+
+npm manifest: 
+  {
+    "name": "react-highcharts",
+    "version": "16.0.1",
+    "description": "React wrapper for highcharts",
+    "main": "dist/ReactHighcharts.js",
+    "scripts": {
+      "test": "webpack && mocha test/unit",
+      "e2e": "nightwatch test/e2e/e2e-launcher.js -e local --config nightwatch.js ",
+      "e2e-sc": "nightwatch test/e2e/e2e-launcher.js -e saucelabs --config nightwatch.js ",
+      "build": "webpack && webpack --env.p && webpack --env.b && webpack --env.p --env.b",
+      "demo": "cd demo && webpack &&  sh generate-contents.sh && ../node_modules/.bin/webpack-dev-server --content-base dist/",
+      "prepublish": "npm run build && npm run copy-bundles",
+      "copy-bundles": "sh ./src/copy-bundles.sh",
+      "deploy-demo": "./demo/deploy.sh",
+      "generate-modules": "(cd src; sh ./generate-modules.sh)",
+      "preversion": "npm test",
+      "version": "npm run prepublish",
+      "postversion": "git push && git push --tags"
+    },
+    "author": "Kirill Cherkashin",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kirjs/react-highcharts"
+    },
+    "peerDependencies": {
+      "react": "~0.14 || ^15.0.0 || ^16.0.0",
+      "react-dom": "~0.14 || ^15.0.0 || ^16.0.0"
+    },
+    "bugs": "https://github.com/kirjs/react-highcharts/issues",
+    "keywords": [
+      "chart",
+      "react",
+      "highcharts",
+      "graph"
+    ],
+    "devDependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-core": "^6.24.0",
+      "babel-loader": "^7.1.2",
+      "babel-plugin-add-module-exports": "^0.2.1",
+      "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
+      "babel-preset-env": "^1.6.1",
+      "babel-preset-react": "^6.24.1",
+      "babel-preset-stage-2": "^6.24.1",
+      "create-react-class": "^15.6.2",
+      "css-loader": "^0.28.8",
+      "exports-loader": "^0.6.4",
+      "file-loader": "^1.1.6",
+      "highlight.js": "^9.12.0",
+      "imports-loader": "^0.7.1",
+      "jsdom": "^11.5.1",
+      "mocha": "^4.1.0",
+      "mock-require": "^2.0.2",
+      "nightwatch": "^0.9.19",
+      "prop-types": "^15.6.0",
+      "raw-loader": "^0.5.1",
+      "react": "^16.2.0",
+      "react-dom": "^16.2.0",
+      "sinon": "^4.1.3",
+      "style-loader": "^0.19.1",
+      "uglifyjs-webpack-plugin": "^1.1.6",
+      "webpack": "^3.10.0",
+      "webpack-dev-server": "^2.9.6",
+      "prismjs": "^1.9.0",
+      "react-prism": "^4.3.2"
+    },
+    "dependencies": {
+      "highcharts": "git+https://github.com/EziraNetwork/highcharts-dist#tmp"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
