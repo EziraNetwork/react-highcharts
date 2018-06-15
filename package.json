@@ -66,6 +66,6 @@
     "react-prism": "^4.3.2"
   },
   "dependencies": {
-    "highcharts": "git+https://github.com/EziraNetwork/highcharts-dist"
+    "highcharts": "git+https://github.com/EziraNetwork/highcharts-dist#tmp"
   }
 }
